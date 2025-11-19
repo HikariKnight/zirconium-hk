@@ -10,7 +10,7 @@ set -ouex pipefail
 # https://mirrors.rpmfusion.org/mirrorlist?path=free/fedora/updates/39/x86_64/repoview/index.html&protocol=https&redirect=1
 
 # Ghostty does not work on some older systems
-dnf5 remove -y ghostty
+dnf5 remove -y ghostty foot
 
 # this installs a package from fedora repos
 dnf5 install -y ptyxis gnome-disk-utility openvpn NetworkManager-openvpn
