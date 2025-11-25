@@ -13,7 +13,17 @@ set -ouex pipefail
 dnf5 remove -y ghostty
 
 # this installs a package from fedora repos
-dnf5 install -y ptyxis gnome-disk-utility openvpn NetworkManager-openvpn vim
+dnf5 install -y \
+    ptyxis \
+    gnome-disk-utility \
+    openvpn \
+    NetworkManager-openvpn \
+    vim \
+    ibus \
+    ibus-setup \
+    ibus-gtk2 \
+    ibus-gtk3 \
+    ibus-gtk4
 
 # Use a COPR Example:
 #
