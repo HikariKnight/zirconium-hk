@@ -32,6 +32,10 @@ dnf5 install -y \
 # Disable COPRs so they don't end up enabled on the final image:
 # dnf5 -y copr disable ublue-os/staging
 
+# Fix grub-mkconfig
+# shellcheck disable=SC2016
+sed -i 's/^GRUB_DEVICE=.*/GRUB_DEVICE="`${grub_probe} --target=device \/sysroot`"/' /usr/bin/grub2-mkconfig
+
 #### Example for enabling a System Unit File
 
 systemctl enable podman.socket
